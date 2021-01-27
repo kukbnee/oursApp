@@ -2,6 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <!--script type="text/javascript" src="js/common.js"></script-->
     <title></title>
   </head>
   <body>
@@ -17,6 +20,7 @@
       <li style="bold"><a href="">청첩장</a></li>
       <li><a href="">가계부</a></li>
       <li><a href="">육아일기</a></li>
+      <li><a href="testJsp.jsp">etc..</a></li>
     </ol>
     <hr>
     <p>
@@ -34,5 +38,15 @@
 
     </p>
     <a href="mcard.html">바로가기: 청첩장샘플</a>
+    <script>
+
+      var vLis = document.getElementsByTagName("li");
+      for(var i=0; i<vLis.length; i++) {
+        var vLi = vLis[i];
+        vLi.style.border = "1px solid #00ff";
+        console.log(vLi.innerText);
+      }
+      console.log(parent.document.getElementsByTagName("p").innerText);
+    </script>
   </body>
 </html>
